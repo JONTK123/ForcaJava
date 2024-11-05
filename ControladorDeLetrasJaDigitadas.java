@@ -5,6 +5,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     public ControladorDeLetrasJaDigitadas ()
     {
         // torna this.letrasJaDigitadas igual ao String vazio
+        this.letrasJaDigitadas = "";
     }
 
     public boolean isJaDigitada (char letra)
@@ -12,14 +13,30 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         // percorrer o String this.letrasJaDigitadas e verificar se ele
         // possui a letra fornecida, retornando true em caso afirmativo
         // ou false em caso negativo
+        if (this.letrasJaDigitadas == null) {
+            return false;
+        }
+
+        for(int i = 0; i < letrasJaDigitadas.length(); i++ ) {
+            if (this.letrasJaDigitadas.charAt(i) == letra) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void registre (char letra) throws Exception
     {
-		// verifica se a letra fornecida ja foi digitada (pode usar
-		// o método this.isJaDigitada, para isso), lancando uma exceção
-		// em caso afirmativo.
-		// concatena a letra fornecida a this.letrasJaDigitadas.
+        // verifica se a letra fornecida ja foi digitada (pode usar
+        // o método this.isJaDigitada, para isso), lancando uma exceção
+        // em caso afirmativo.
+        // concatena a letra fornecida a this.letrasJaDigitadas.
+        if (isJaDigitada(letra)) {
+            throw new Exception("Palavra ja digitada");
+        } else {
+            this.letrasJaDigitadas += letra;
+        }
     }
 
     public String toString ()
