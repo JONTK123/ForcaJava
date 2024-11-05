@@ -6,8 +6,8 @@ public class Palavra
 
     public Palavra (String texto) throws Exception
     {
-        // verifica se o texto recebido é nulo ou então vazio,
-        // ou seja, sem nenhum caractere, lançando exceção.
+        // verifica se o texto recebido ï¿½ nulo ou entï¿½o vazio,
+        // ou seja, sem nenhum caractere, lanï¿½ando exceï¿½ï¿½o.
         // armazena o texto recebido em this.texto.
         if (texto == null || texto.isEmpty()) {
             throw new Exception("Palavra vazia");
@@ -40,8 +40,8 @@ public class Palavra
         // se i==2, retorna a posicao em que ocorre a terceira
         // aparicao de letra fornecida em this.texto;
         // e assim por diante.
-        // lançar excecao caso nao encontre em this.texto
-        // a Iézima aparição da letra fornecida.
+        // lanï¿½ar excecao caso nao encontre em this.texto
+        // a Iï¿½zima apariï¿½ï¿½o da letra fornecida.
 
         int occurrenceCount = 0;
 
@@ -54,13 +54,14 @@ public class Palavra
             }
         }
 
-        throw new Exception("Não foi encontrada a " + (i+1) + "ª ocorrência da letra '" + letra + "' em " + this.texto);
+        throw new Exception("Nï¿½o foi encontrada a " + (i+1) + "ï¿½ ocorrï¿½ncia da letra '" + letra + "' em " + this.texto);
     }
 
     public int getTamanho ()
     {
         return this.texto.length();
     }
+
 //
 //    public String toString ()
 //    {
@@ -69,7 +70,7 @@ public class Palavra
 //
 //    public boolean equals (Object obj)
 //    {
-//        // verificar se this e obj possuem o mesmo conteúdo, retornando
+//        // verificar se this e obj possuem o mesmo conteï¿½do, retornando
 //        // true no caso afirmativo ou false no caso negativo
 //    }
 //

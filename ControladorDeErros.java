@@ -4,8 +4,8 @@ public class ControladorDeErros implements Cloneable
 
     public ControladorDeErros (int qtdMax) throws Exception
     {
-        // verifica se qtdMax fornecida não é positiva, lançando
-        // uma exceção.
+        // verifica se qtdMax fornecida nï¿½o ï¿½ positiva, lanï¿½ando
+        // uma exceï¿½ï¿½o.
         // armazena qtdMax fornecida em this.qtdMax.
         if (qtdMax<0) throw new Exception ("Quantidade invalida");
 
@@ -14,8 +14,8 @@ public class ControladorDeErros implements Cloneable
 
     public void registreUmErro () throws Exception
     {
-        // verifica se this.qtdErr ja é igual a this.qtdMax,
-        // lançando excecao em caso positivo ou
+        // verifica se this.qtdErr ja ï¿½ igual a this.qtdMax,
+        // lanï¿½ando excecao em caso positivo ou
         // incrementando this.qtdErr em caso negativo
         if (this.qtdErr==this.qtdMax) throw new Exception ("Errou alem do maximo");
 
@@ -25,40 +25,37 @@ public class ControladorDeErros implements Cloneable
     public boolean isAtingidoMaximoDeErros  ()
     {
         // returna true se this.qtdErr for igual a this.qtdMax,
-        // ou então false, caso contrario.
-        /*
+        // ou entï¿½o false, caso contrario.
+
         if (this.qtdErr==this.qtdMax)
             return true;
         else
             return false;
-        */
-
-        return this.qtdErr==this.qtdMax;
     }
-
-    public String toString ()
-    {
-        return this.qtdErr + "/" + this.qtdMax;
-    }
-
-    public boolean equals (Object obj)
-    {
-        // verificar se this e obj possuem o mesmo conteúdo, retornando
-        // true no caso afirmativo ou false no caso negativo
-    }
-
-    public int hashCode ()
-    {
-        // calcular e retornar o hashcode de this
-    }
-
-    public ControladorDeErros (ControladorDeErros c) throws Exception // construtor de cópia
-    {
-        // copiar c.qtdMax e c.qtdErr, respectivamente em, this.qtdMax e this.qtdErr
-    }
-
-    public Object clone ()
-    {
-        // returnar uma cópia de this
-    }
+//
+//    public String toString ()
+//    {
+//        return this.qtdErr + "/" + this.qtdMax;
+//    }
+//
+//    public boolean equals (Object obj)
+//    {
+//        // verificar se this e obj possuem o mesmo conteï¿½do, retornando
+//        // true no caso afirmativo ou false no caso negativo
+//    }
+//
+//    public int hashCode ()
+//    {
+//        // calcular e retornar o hashcode de this
+//    }
+//
+//    public ControladorDeErros (ControladorDeErros c) throws Exception // construtor de cï¿½pia
+//    {
+//        // copiar c.qtdMax e c.qtdErr, respectivamente em, this.qtdMax e this.qtdErr
+//    }
+//
+//    public Object clone ()
+//    {
+//        // returnar uma cï¿½pia de this
+//    }
 }
