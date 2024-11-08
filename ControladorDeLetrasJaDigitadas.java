@@ -55,10 +55,17 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         return listaDigitadas.toString();
     }
 //
-//    public boolean equals (Object obj)
-//    {
-//        // verificar se this e obj s�o iguais
-//    }
+    public boolean equals (Object obj)
+    {
+       // verificar se this e obj s�o iguais
+        if(obj == null) return false;
+        if(obj == this) return true;
+        if(obj.getClass() != this.getClass()) return false;
+
+        ControladorDeLetrasJaDigitadas other = (ControladorDeLetrasJaDigitadas) obj;
+        if(!(this.letrasJaDigitadas.equal(other.letrasJaDigitadas))) return false;
+        return true;
+    }
 //
 //    public int hashCode ()
 //    {
