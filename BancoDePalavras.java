@@ -6,7 +6,7 @@ public class BancoDePalavras
 		"CLASSE",
 		"OBJETO",
 		"INSTANCIA",
-		"PUBLICO",
+		"PUBLICO,
 		"PRIVATIVO",
 		"METODO",
 		"CONSTRUTOR",

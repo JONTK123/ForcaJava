@@ -38,12 +38,22 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
             this.letrasJaDigitadas += letra;
         }
     }
+    
+    public String toString ()
+    {
+		// retorna um String com TODAS as letras presentes em
+		// this.letrasJaDigitadas separadas por v�rgula (,).
 
-//    public String toString ()
-//    {
-//		// retorna um String com TODAS as letras presentes em
-//		// this.letrasJaDigitadas separadas por v�rgula (,).
-//    }
+        StringBuilder listaDigitadas = new StringBuilder();
+        for(int i = 0; i < letrasJaDigitadas.length(); i++ ){
+            listaDigitadas.append(letrasJaDigitadas.charAt(i));
+            if(i < letrasJaDigitadas.length() - 1){
+                listaDigitadas.append(",");
+            }
+        }
+
+        return listaDigitadas.toString();
+    }
 //
 //    public boolean equals (Object obj)
 //    {
