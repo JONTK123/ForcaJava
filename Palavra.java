@@ -1,6 +1,5 @@
-public class Palavra
 
-//public class Palavra implements Comparable<Palavra>
+public class Palavra implements Comparable<Palavra>
 {
     private String texto;
 
@@ -62,25 +61,38 @@ public class Palavra
         return this.texto.length();
     }
 
-//
-//    public String toString ()
-//    {
-//        return this.texto;
-//    }
-//
-//    public boolean equals (Object obj)
-//    {
-//        // verificar se this e obj possuem o mesmo conte�do, retornando
-//        // true no caso afirmativo ou false no caso negativo
-//    }
-//
-//    public int hashCode ()
-//    {
-//        // calcular e retornar o hashcode de this
-//    }
-//
-//    public int compareTo (Palavra palavra)
-//    {
-//        return this.texto.compareTo(palavra.texto);
-//    }
+
+    public String toString ()
+    {
+        return this.texto;
+    }
+
+    public boolean equals (Object obj)
+    {
+        // verificar se this e obj possuem o mesmo conte�do, retornando
+        // true no caso afirmativo ou false no caso negativo
+        if(obj == null)return false;
+        if(obj == this)return true;
+        if(obj.getClass() != this.getClass())return false;
+
+        Palavra other = (Palavra) obj;
+        if(!(this.texto.equals(other.texto))) return false;
+        return true;
+    }
+
+    public int hashCode ()
+    {
+        // calcular e retornar o hashcode de this
+        int ret = 1;
+        ret = ret*2 + String.valueOf(this.texto).hashCode();
+
+        return ret;
+    }
+
+    public int compareTo (Palavra palavra)
+    {
+        if(this.texto.compareTo(palavra.texto) > 0) return 1;
+        if(this.texto.compareTo(palavra.texto) < 0) return -1;
+        return 0;
+    }
 }

@@ -73,7 +73,7 @@ public class Forca
 				}
 			}
 
-			if (controladorDeErros.isAtingidoMaximoDeErros ())
+			if (controladorDeErros.isAtingidoMaximoDeErros())
 				System.out.println ("Que pena! Voce perdeu! A palavra era "+palavra+"\n");
 			else // !tracinhos.isAindaComTracinhos()
 				System.out.println ("Parabens! Voce ganhou! A palavra era mesmo "+palavra+"\n");
