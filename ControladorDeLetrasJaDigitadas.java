@@ -65,7 +65,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         if(obj.getClass() != this.getClass()) return false;
 
         ControladorDeLetrasJaDigitadas other = (ControladorDeLetrasJaDigitadas) obj;
-        if(!(this.letrasJaDigitadas.equal(other.letrasJaDigitadas))) return false;
+        if (this.letrasJaDigitadas.length() != other.letrasJaDigitadas.length()) return false;
         return true;
     }
 
@@ -82,7 +82,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     {
         // copiar c.letrasJaDigitadas em this.letrasJaDigitadas
         if(controladorDeLetrasJaDigitadas == null) throw new Exception("Controlador de letras já digitadas inválido");
-        this.letrasJaDigitadas = controladorDeLetrasJaDigitadas.letrasJaDigitadas
+        this.letrasJaDigitadas = controladorDeLetrasJaDigitadas.letrasJaDigitadas;
     }
 
     @Override
